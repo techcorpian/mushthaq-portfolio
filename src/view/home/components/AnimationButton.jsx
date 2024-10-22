@@ -49,7 +49,7 @@ function AnimationButton() {
     <div className="container z-10">
       {isMessageVisible && (
         <div className="message text-green-500 font-semibold transition-all duration-500 ease-in-out px-6 py-2 rounded-full border border-green-500">
-          We will contact you soon!
+          I will ping you soon!
         </div>
       )}
 
@@ -65,7 +65,7 @@ function AnimationButton() {
             className={`input-box bg-white text-black px-6 py-2 rounded-full transition-all duration-500 ease-in-out pr-10 ${
               isAnimating ? 'opacity-0 w-0' : 'opacity-100 w-48'
             }`}
-            placeholder="Enter your details..."
+            placeholder="Enter your Email ID..."
           />
           <button
             type="submit"
@@ -85,7 +85,7 @@ function AnimationButton() {
             className="flex items-center gap-4 bg-white text-black px-6 py-2 rounded-full transition-all duration-500 ease-in-out"
             onClick={handleButtonClick}
           >
-            Get in touch with us <FaArrowRight size={20} className='text-gray-500'/>
+            Get in touch with me <FaArrowRight size={20} className='text-gray-500'/>
           </button>
         )
       )}

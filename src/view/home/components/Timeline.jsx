@@ -1,6 +1,24 @@
 import React, { useEffect, useRef } from 'react';
 
 const ZigzagTimelineWithDots = () => {
+  const Journey = [
+    {
+      "year":"2019",
+      "desc":"sdfsdfsfsdfsdffsdfsd"
+    },
+    {
+      "year":"2020",
+      "desc":"sdfsdfsfsdfsdffsdfsd"
+    },
+    {
+      "year":"2021",
+      "desc":"sdfsdfsfsdfsdffsdfsd"
+    },
+    {
+      "year":"2022",
+      "desc":"sdfsdfsfsdfsdffsdfsd"
+    },
+  ]
   const timelineItemsRef = useRef([]);
 
   useEffect(() => {
@@ -33,15 +51,15 @@ const ZigzagTimelineWithDots = () => {
 
   return (
     <div className="timeline md:px-6">
-      {[...Array(5)].map((_, index) => (
+      {Journey.map((journey, index) => (
         <div
           key={index}
           ref={(el) => (timelineItemsRef.current[index] = el)}
           className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'} fade-out`} // Alternating left and right
         >
           <div className="timeline-content">
-            <h2>Event {index + 1}</h2>
-            <p>This is the description for event This is the description for event This is the description for event This is the description for event This is the description for event{index + 1}.</p>
+            <h2>{journey.year}</h2>
+            <p>{journey.desc}</p>
           </div>
           <div className="dot"></div> {/* Dot for each event */}
         </div>

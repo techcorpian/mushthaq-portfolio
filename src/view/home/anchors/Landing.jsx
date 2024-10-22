@@ -10,8 +10,8 @@ const Landing = () => {
          md:px-20 p-6'>
             <div className='flex flex-col justify-center items-center gap-8 md:py-32'>
                 <div className='text-white text-center md:py-0 pt-20'>
-                    <h1 className='md:text-6xl text-4xl font-bold'>Welcome to Zen Portal</h1>
-                    <p className='text-xl font-light text-gray-500'>Your one-stop solution for all your needs.</p>
+                    <h1 className='md:text-7xl text-4xl font-bold'>Mushthaq Ameen.</h1>
+                    <p className='text-2xl font-light text-gray-200 py-2'>Full Stack Developer</p>
                 </div>
                 <AnimationButton />
             </div>
