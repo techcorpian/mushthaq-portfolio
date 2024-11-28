@@ -41,7 +41,7 @@ const AllProjects = () => {
                         className='w-full h-full hover:bg-white/10 hover:border hover:border-white/10 rounded-2xl cursor-pointer transition-all duration-200'
                     ></div>
                 ))}
-                <div className='absolute top-20 left-6 text-7xl font-semibold text-white/20'>
+                <div className='flex md:flex-col flex-row absolute top-20 left-6 text-4xl md:text-7xl font-semibold text-white/20'>
                     <div>My</div>
                     <div>Other</div>
                     <div>Works.</div>
@@ -49,7 +49,7 @@ const AllProjects = () => {
 
                 {/* Animated Section */}
                 <div
-                    className={`absolute bottom-0 right-0 text-6xl font h-5/6 w-2/5 flex flex-col gap-4 ${
+                    className={`absolute flex items-center bottom-0 right-0 text-6xl font h-5/6 w-full md:w-2/5 flex flex-col gap-4 ${
                         isVisible
                             ? 'transform translate-x-0 shadow-black bg-bitter-black' 
                             : 'transform '

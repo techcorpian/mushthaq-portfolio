@@ -44,7 +44,7 @@ const Menu = () => {
         };
     }, [menuRef]);
     return (
-        <div className="sticky top-4 w-full inset-0 z-50">
+        <div className="fixed top-0 w-full inset-0 z-50">
             <div className='md:flex justify-between px-2 py-1 items-center gap-4 bg-white/20 border border-white/10 backdrop-filter backdrop-blur-lg mx-9 my-4 rounded-full hidden'>
                 <div className='flex'>
                     <Logo spanClass='md:text-lg text-xl' divClass='md:text-lg text-xl' />
@@ -85,13 +85,25 @@ const Menu = () => {
             </div>
             <div ref={menuRef} className={`fixed top-0 z-20 inset-x-0 p-2 transition transform origin-top-right md:hidden ${isMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'}`}>
                 <div className="rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5 ">
-                    {
-                        MenuTitles.map((data, index) => (
-                            <Link to={`${data.link}`} key={index} className='block py-2 px-4 text-black hover:bg-gray-100'>{data.title}</Link>
-                        ))
-                    }
+                {
+                            MenuTitles.map((data, index) => (
+                                <ScrollLink
+                                    to={data.link}
+                                    key={index}
+                                    activeClass="active"
+                                    className={
+                                        `block py-2 px-3 font-light hover:text-gray-100 text-gray-400 hover:text-black/80 text-base rounded-full active:bg-black/80 cursor-pointer`
+                                    }
+                                    smooth={true}
+                                    duration={500}
+                                >
+                                    {data.title}
+                                </ScrollLink>
+
+                            ))
+                        }
                 </div>
-                <Link to='/portal' className='border border-[#EEB708] text-sm py-1 px-4 rounded-full float-right bg-[#EEB708] text-black my-2'>Get in touch</Link>
+                <ScrollLink to="contact" className='border border-[#EEB708] text-sm py-1 px-4 rounded-full float-right bg-[#EEB708] text-black my-2'>Get in touch</ScrollLink>
             </div>
         </div>
     )
