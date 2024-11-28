@@ -3,7 +3,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const center = [12.971598, 77.594566]; // Replace with your latitude and longitude
+const center = [13.05520377248974, 80.27304915166063]; // Replace with your latitude and longitude
 
 export default function LeafletMap() {
   return (

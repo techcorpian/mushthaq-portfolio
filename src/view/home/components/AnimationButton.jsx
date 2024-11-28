@@ -3,38 +3,42 @@ import { FaArrowRight, FaSpinner } from 'react-icons/fa';
 
 function AnimationButton() {
   const [isInputVisible, setIsInputVisible] = useState(false);
+  const [name, setName] = useState("");
   const [isAnimating, setIsAnimating] = useState(false);
   const [isMessageVisible, setIsMessageVisible] = useState(false);
-  const [isLoading, setIsLoading] = useState(false); // New loading state
+  const [isLoading, setIsLoading] = useState(false);
   const menuRef = useRef(null);
   const inputRef = useRef(null);
 
   const handleButtonClick = () => {
     setIsInputVisible(true);
-    setIsMessageVisible(false); // Hide message when showing input
+    setIsMessageVisible(false);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const inputValue = inputRef.current.value;
-    console.log('Submitted:', inputValue);
+    console.log('Submitted:', name);
 
-    setIsLoading(true); // Set loading to true
+    setIsLoading(true);
     setTimeout(() => {
       setIsInputVisible(false);
-      setIsLoading(false); // Reset loading after submission
-      setIsMessageVisible(true); // Show the message after submission
+      setIsLoading(false);
+      setIsMessageVisible(true);
     }, 400);
+  };
+
+  const handleChange = (e) => {
+    setName(e.target.value);
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsAnimating(true); // Start the animation for input exit
+        setIsAnimating(true);
         setTimeout(() => {
           setIsInputVisible(false);
           setIsAnimating(false);
-        }, 400); // Match transition duration (400ms)
+        }, 400);
       }
     };
 
@@ -49,7 +53,7 @@ function AnimationButton() {
     <div className="container z-10">
       {isMessageVisible && (
         <div className="message text-green-500 font-semibold transition-all duration-500 ease-in-out px-6 py-2 rounded-full border border-green-500">
-          I will ping you soon!
+          Welcome To My World, {name}!
         </div>
       )}
 
@@ -62,19 +66,21 @@ function AnimationButton() {
           <input
             ref={inputRef}
             type="text"
+            value={name}
+            onChange={handleChange}
             className={`input-box bg-white text-black px-6 py-2 rounded-full transition-all duration-500 ease-in-out pr-10 ${
               isAnimating ? 'opacity-0 w-0' : 'opacity-100 w-48'
             }`}
-            placeholder="Enter your Email ID..."
+            placeholder="Enter Your Amazing Name..."
           />
           <button
             type="submit"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500"
           >
             {isLoading ? (
-              <FaSpinner className="animate-spin" size={20} /> // Loading spinner
+              <FaSpinner className="animate-spin" size={20} />
             ) : (
-              <FaArrowRight size={20} /> // Arrow Icon
+              <FaArrowRight size={20} />
             )}
           </button>
         </form>
@@ -82,10 +88,10 @@ function AnimationButton() {
         !isMessageVisible && (
           <button
             type="button"
-            className="flex items-center gap-4 bg-white text-black px-6 py-2 rounded-full transition-all duration-500 ease-in-out"
+            className="flex items-center gap-4 bg-white text-black px-6 py-2 rounded-full transition-all duration-500 ease-in-out animate-glow"
             onClick={handleButtonClick}
           >
-            Get in touch with me <FaArrowRight size={20} className='text-gray-500'/>
+            Click Here For a Magic <FaArrowRight size={20} className="text-gray-500" />
           </button>
         )
       )}

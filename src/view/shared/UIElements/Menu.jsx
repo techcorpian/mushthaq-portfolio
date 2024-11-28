@@ -10,12 +10,16 @@ const Menu = () => {
         "link": 'home'
     },
     {
-        "title": 'Our Journey',
+        "title": 'My Journey',
         "link": 'journey'
     },
     {
-        "title": 'Contact Us',
-        "link": 'contact'
+        "title": 'Tech Stacks',
+        "link": 'stack'
+    },
+    {
+        "title": 'Projects',
+        "link": 'project'
     }
     ];
 
