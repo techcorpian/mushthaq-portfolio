@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import cms1 from "../../../assets/projects/cms2.png";
-import cms2 from "../../../assets/projects/cms5.png";
-import cms3 from "../../../assets/projects/cms3.png";
-import cms4 from "../../../assets/projects/cms4.png";
+import { IoIosCloseCircle } from "react-icons/io";
 
 const Project1 = ({projectTitle, projectTag, children, Image1, Image2, Image3, Image4, bgColor, stickyH}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,10 +26,10 @@ const Project1 = ({projectTitle, projectTag, children, Image1, Image2, Image3, I
               className="rounded-lg max-w-[90vw] max-h-[90vh]"
             />
             <button
-              className="absolute top-2 right-2 bg-red-500 text-white py-2 px-4 rounded-full"
+              className="absolute top-1 right-1 md:top-2 md:right-2 text-red-700 py-2 px-4 rounded-full"
               onClick={closeModal}
             >
-              Close Image
+              <IoIosCloseCircle/>
             </button>
           </div>
         </div>
@@ -46,7 +43,7 @@ const Project1 = ({projectTitle, projectTag, children, Image1, Image2, Image3, I
       </div>
 
       <div className="flex md:flex-row flex-col justify-between items-start gap-6 mt-9 text-white">
-        <div className='w-full md:w-1/2 lg:block hidden text-sm'>{children}</div>
+        <div className='w-full md:w-1/2 text-sm'>{children}</div>
         <div className="flex flex-col gap-6">
           <div className="flex flex-row gap-6">
             <div>

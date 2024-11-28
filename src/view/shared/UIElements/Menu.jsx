@@ -44,7 +44,7 @@ const Menu = () => {
         };
     }, [menuRef]);
     return (
-        <div className="fixed top-0 w-full inset-0 z-50">
+        <div className="sticky top-4 w-full inset-0 z-50">
             <div className='md:flex justify-between px-2 py-1 items-center gap-4 bg-white/20 border border-white/10 backdrop-filter backdrop-blur-lg mx-9 my-4 rounded-full hidden'>
                 <div className='flex'>
                     <Logo spanClass='md:text-lg text-xl' divClass='md:text-lg text-xl' />
