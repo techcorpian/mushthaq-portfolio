@@ -26,7 +26,7 @@ const FrontendSkills = ({ content }) => {
                         >
                             {data.title}
                         </div>
-                        <div className=' text-sm hidden md:block px-4 py-0 border border-yellow-200 text-yellow-200 rounded-full '>{data.exp} {data.exp == 1 ? "Year Exp" : "Years Exp"}</div>
+                        {/* <div className=' text-sm hidden md:block px-4 py-0 border border-yellow-200 text-yellow-200 rounded-full '>{data.exp} {data.exp == 1 ? "Year Exp" : "Years Exp"}</div> */}
                         </div>
                         <div
                             className={`cursor-pointer transition-transform duration-300 ${
