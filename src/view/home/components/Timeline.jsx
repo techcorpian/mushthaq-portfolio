@@ -26,7 +26,7 @@ const ZigzagTimelineWithDots = () => {
     {
       "year":"Oct 2023 - Present",
       "company":"ALL-POS Technologies, Chennai - Software Developer",
-      "desc":`Independently developed an Application named Gift Card With React JS as frontend and PHP Laravel as backend, which encompasses the Creation and Redemption of Cards. The application incorporates various Features, Functionalities, and Validations.
+      "desc":`Independently developed an Application named Gift Card With React JS as frontend and Node JS as backend, which encompasses the Creation and Redemption of Cards. The application incorporates various Features, Functionalities, and Validations.
       It also implements a High-level Authentication and Authorization process to ensure Secure User Interactions.
       In addition, I played a Pivotal Role in integrating the application with the Sales and Purchase systems by utilizing APIs.
       Collaborating within a team, I Addressed and Resolved Issues related to dev. and Successfully Debugged collective queries from end-users, enhancing the overall user experience.
