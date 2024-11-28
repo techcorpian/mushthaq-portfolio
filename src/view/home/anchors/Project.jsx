@@ -37,7 +37,7 @@ const Project1 = ({projectTitle, projectTag, children, Image1, Image2, Image3, I
           </div>
         </div>
       )}
-    <div id="project" className={`${bgColor} border border-white/20 backdrop-filter backdrop-blur-sm sticky ${stickyH} h-screen rounded-3xl px-6 py-3`}>
+    <div id="project" className={`${bgColor} border border-white/20 backdrop-filter backdrop-blur-xl sticky ${stickyH} h-screen rounded-3xl px-6 py-3`}>
       <div className="flex justify-center md:justify-start items-center gap-6 text-xl md:text-4xl text-gray-300 font-bold">
         {projectTitle}
         <span className="text-sm mx-2 px-4 py-1 border hidden md:flex border-yellow-200 text-yellow-200 rounded-full">
