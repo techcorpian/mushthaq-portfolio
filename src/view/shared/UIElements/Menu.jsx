@@ -83,7 +83,7 @@ const Menu = () => {
                     </button>
                 </div>
             </div>
-            <div ref={menuRef} className={`fixed top-0 z-20 inset-x-0 p-2 transition transform origin-top-right md:hidden ${isMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'}`}>
+            <div ref={menuRef} className={`fixed top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden ${isMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'}`}>
                 <div className="rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5 ">
                 {
                             MenuTitles.map((data, index) => (
